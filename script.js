@@ -114,7 +114,7 @@ function displayResult() {
 function updateVideoSource() {
   const video = document.getElementById('bgVideo');
   // Check if viewport width is 375px or less
-  if (window.innerWidth <= 400) {
+  if (window.innerWidth <= 810) {
     // Change to the mobile video
     video.querySelector('source').src = 'mobilevideo.mp4';
   } else {
