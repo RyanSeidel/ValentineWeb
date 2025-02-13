@@ -53,7 +53,7 @@ function displayResult() {
     result += randomCatMessage + " ";
 
     // Randomly select a cat image from the available files
-    const catImages = ["cat.png", "cat2.png", "cat3.png", "cat4.png", "cat5.png", "cat6.png", "cat7.jpg", "cat8.jpg", "cat10.jgp"]; // Update these file names as needed
+    const catImages = ["cat.png", "cat2.png", "cat3.png", "cat4.png", "cat5.png", "cat6.png", "cat7.jpg", "cat8.jpg", "cat10.jgp", "cat11.jgp", "cat12.jgp", "cat1.jpg"]; // Update these file names as needed
     const randomCat = catImages[Math.floor(Math.random() * catImages.length)];
     document.getElementById('resultImage').src = "CatPhotos/" + randomCat; // Ensure the folder path is correct
   } else if (answers.question1 === 'dog') {
@@ -74,7 +74,7 @@ function displayResult() {
     result += randomDogMessage + " ";
 
     // Randomly select a dog image from the available files
-    const dogImages = ["dog.png", "dog.jpg", "dog2.jpg", "dog5.png", "dog8.jpg", "dog11.jpg", "dog12.jpg", "dog13.jpg"]; // Update these file names as needed
+    const dogImages = ["dog.png", "dog.jpg", "dog2.jpg", "dog5.png", "dog8.jpg", "dog11.jpg", "dog12.jpg", "dog13.jpg", "dog14.jgp", "dog15.jpg", "pug.jpg", "husky.jpg"]; // Update these file names as needed
     const randomDog = dogImages[Math.floor(Math.random() * dogImages.length)];
     document.getElementById('resultImage').src = "DogPhotos/" + randomDog; // Ensure the folder path is correct
   }

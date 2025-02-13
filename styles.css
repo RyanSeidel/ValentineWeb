@@ -8,6 +8,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Lexend Deca', sans-serif;
+
 }
 
 .video-background {
@@ -97,7 +98,7 @@ body {
 
 /* Button styling with fixed width */
 .button-container button {
-  width: 250px; /* Fixed width */
+  width: 270px; /* Fixed width */
   outline: 0;
   font-family: 'Lexend Deca', sans-serif;
   align-items: center;
@@ -108,7 +109,7 @@ body {
   cursor: pointer;
   display: inline-flex;
   flex-shrink: 0;
-  font-size: 16px;
+  font-size: 18px;
   gap: 8px;
   justify-content: center;
   line-height: 1.5;
@@ -137,6 +138,7 @@ body {
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.95);
   border: 2px solid #e75480;
+  font-size: 20px;
   border-radius: 10px;
   padding: 20px;
   display: flex;
@@ -192,7 +194,7 @@ body {
 /* Adjust container for phones (max-width: 450px, max-height: 900px) */
 @media screen and (max-width: 450px) {
   .container {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 300px;
     height: 400px;
   }
