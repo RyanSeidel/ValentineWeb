@@ -52,7 +52,7 @@
       <div class="button-container">
         <button onclick="choose('question2', 'relax')">Relaxing at home</button>
         <button onclick="choose('question2', 'adventure')">Going on an adventure</button>
-        <button onclick="choose('question2', 'balanced')">A mix of both</button>
+        <button onclick="choose('question2', 'gym')">Going to the Gym </button>
       </div>
     </div>
 
@@ -78,21 +78,41 @@
   <script src="animation.js"></script>
   <script src="background.js"></script>
   <script>
-    // Function to start the quiz
     function startQuiz() {
-      // Attempt to play background music (this should work because it's a user interaction)
+      // Get the background music element
       var bgMusic = document.getElementById("backgroundMusic");
+    
+      // Define an array of songs (update with your actual file names and paths)
+      var songs = [
+        "musicfolder/aptaudio.mp3",
+        "musicfolder/audio2.mp3",
+        "musicfolder/edsherran.mp3",
+        "musicfolder/justintimberlake.mp3",
+        "musicfolder/onedirection.mp3",
+        "musicfolder/justinbieber.mp3",
+        "musicfolder/manwhocantbemoved.mp3"  
+        
+      ];
+    
+      // Randomly select a song from the array
+      var randomIndex = Math.floor(Math.random() * songs.length);
+      bgMusic.src = songs[randomIndex];
+    
+      // Lower the volume to 30%
+      bgMusic.volume = 0.3;
+    
+      // Attempt to play the background music
       bgMusic.play().catch(function(error) {
         console.error("Music playback error:", error);
       });
-
+    
       // Hide the start screen popup
       document.getElementById("startScreen").style.display = "none";
-
+    
       // Show Question 1 by switching its display and adding the slide-in animation
       var questionBox1 = document.getElementById("questionBox1");
       questionBox1.style.display = "block";
-      // Force reflow before adding animation class, if needed
+      // Force reflow to ensure the browser registers the display change
       void questionBox1.offsetWidth;
       questionBox1.classList.add("slide-in");
     }

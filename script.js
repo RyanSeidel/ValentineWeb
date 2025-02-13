@@ -36,11 +36,47 @@ function displayResult() {
 
   // Customize the result based on Question 1 (cat or dog)
   if (answers.question1 === 'cat') {
-    result += "Cozy Cat Vibes. ";
-    document.getElementById('resultImage').src = "cat.png"; // Update with actual cat image path
+    // Randomize between multiple "Cozy Cat" messages, if desired
+    const catMessages = [
+      "Cozy Cat Vibes.",
+      "You're all about that feline finesse.",
+      "Cat-tastic and cozy!",
+      "You are Purr-fect!",
+      "Your elegance is as timeless as a graceful cat.",
+      "You have the mystique of a stealthy feline.",
+      "Your charm is as irresistible as a cat's purr.",
+      "You're as graceful as a cat on a moonlit night.",
+      "You bring comfort and joy like a purring kitten.",
+      "Your wit is as sharp as a cat's claws."
+    ];
+    const randomCatMessage = catMessages[Math.floor(Math.random() * catMessages.length)];
+    result += randomCatMessage + " ";
+
+    // Randomly select a cat image from the available files
+    const catImages = ["cat.png", "cat2.png", "cat3.png", "cat4.png", "cat5.png", "cat6.png", "cat7.jpg", "cat8.jpg", "cat10.jgp"]; // Update these file names as needed
+    const randomCat = catImages[Math.floor(Math.random() * catImages.length)];
+    document.getElementById('resultImage').src = "CatPhotos/" + randomCat; // Ensure the folder path is correct
   } else if (answers.question1 === 'dog') {
-    result += "Energetic Dog Spirit. ";
-    document.getElementById('resultImage').src = "dog.png"; // Update with actual dog image path
+    // Randomize between multiple "Energetic Dog" messages
+    const dogMessages = [
+      "Energetic Dog Spirit.",
+      "You're full of pup energy!",
+      "Woof! You're a lively companion.",
+      "Your loyalty is as boundless as your spirit.",
+      "You're the best friend anyone could ask for!",
+      "Your enthusiasm brightens every day!",
+      "Your smile is as infectious as a wagging tail.",
+      "You're always up for a fun adventure!",
+      "Your heart is as big as your bark.",
+      "You make the world a happier place with your cheerful nature."
+    ];
+    const randomDogMessage = dogMessages[Math.floor(Math.random() * dogMessages.length)];
+    result += randomDogMessage + " ";
+
+    // Randomly select a dog image from the available files
+    const dogImages = ["dog.png", "dog.jpg", "dog2.jpg", "dog5.png", "dog8.jpg", "dog11.jpg", "dog12.jpg", "dog13.jpg"]; // Update these file names as needed
+    const randomDog = dogImages[Math.floor(Math.random() * dogImages.length)];
+    document.getElementById('resultImage').src = "DogPhotos/" + randomDog; // Ensure the folder path is correct
   }
 
   // Customize based on Question 2 (ideal day off)
@@ -48,8 +84,8 @@ function displayResult() {
     result += "You love quiet days off. ";
   } else if (answers.question2 === 'adventure') {
     result += "You're always up for an adventure. ";
-  } else if (answers.question2 === 'balanced') {
-    result += "You enjoy a balanced mix of relaxation and excitement. ";
+  } else if (answers.question2 === 'gym') {
+    result += "You're passionate about fitness and love hitting the gym! ";
   }
 
   // Customize based on Question 3 (perfect Valentine's day date)
