@@ -133,7 +133,7 @@ body {
 
 .result-container {
   position: fixed;
-  top: 30%;
+  top: 40%;
   right: -100%; /* Start off-screen to the right */
   transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.95);
@@ -161,7 +161,7 @@ body {
 .speech-bubble:after {
   content: "";
   position: absolute;
-  top: 30%;
+  top: 40%;
   right: 100%;
   margin-top: -10px;
   border-width: 10px;
