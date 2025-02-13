@@ -195,6 +195,7 @@ body {
     width: 300px;
     height: 400px;
     margin-top: 50px;
+    overflow: hidden; 
   }
 
   .button-container {
