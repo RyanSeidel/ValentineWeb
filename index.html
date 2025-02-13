@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Preconnect to required origins for Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   
   <!-- Google Fonts stylesheet -->
-  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet" />
   
   <!-- Your main stylesheet -->
-  <link rel="stylesheet" href="styles.css">
-  <script src="background.js"></script>
+  <link rel="stylesheet" href="styles.css" />
   
   <title>Valentine Quiz</title>
 </head>
 <body>
-
+  <!-- Background Video -->
   <video id="bgVideo" class="video-background" autoplay muted loop playsinline>
-    <source src="valentinebackground.mp4" type="video/mp4">
+    <source src="valentinebackground.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
 
-  
+  <!-- Audio element for background music -->
+  <audio id="backgroundMusic" loop>
+    <source src="aptaudio.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
   <div class="container">
-    <!-- Question 1: Dog or Cat Person -->
-    <div class="popup-box" id="questionBox1">
+    <!-- Start Screen Popup (contains the Start! button) -->
+    <div class="popup-box" id="startScreen">
+      <h2>Welcome to the Quiz!</h2>
+      <div class="button-container">
+      <button onclick="startQuiz()">Start!</button></div>
+    </div>
+
+    <!-- Question 1 as a Slide Box (initially hidden) -->
+    <div class="slide-box" id="questionBox1" style="display: none;">
       <h2>Are you a Dog or Cat Person?</h2>
       <div class="button-container">
         <button onclick="choose('question1', 'cat')">Cat Person</button>
@@ -36,8 +46,8 @@
       </div>
     </div>
 
-    <!-- Question 2: Ideal Day Off -->
-    <div class="slide-box" id="questionBox2">
+    <!-- Question 2: Ideal Day Off (hidden initially) -->
+    <div class="slide-box" id="questionBox2" style="display: none;">
       <h2>What is your ideal way to spend a day off?</h2>
       <div class="button-container">
         <button onclick="choose('question2', 'relax')">Relaxing at home</button>
@@ -46,8 +56,8 @@
       </div>
     </div>
 
-    <!-- Question 3: Perfect Valentine's Day Date -->
-    <div class="slide-box" id="questionBox3">
+    <!-- Question 3: Perfect Valentine's Day Date (hidden initially) -->
+    <div class="slide-box" id="questionBox3" style="display: none;">
       <h2>What is your perfect Valentine's Day date?</h2>
       <div class="button-container">
         <button onclick="choose('question3', 'quiet')">Quiet dinner</button>
@@ -60,11 +70,33 @@
   <!-- New Result Container for the animated speech bubble and image -->
   <div id="resultContainer" class="result-container">
     <div id="resultSpeech" class="speech-bubble"></div>
-    <img id="resultImage" class="result-image" src="" alt="Result Animal">
+    <img id="resultImage" class="result-image" src="" alt="Result Animal" />
   </div>
 
   <!-- Place scripts at the end so the DOM is fully loaded -->
   <script src="script.js"></script>
   <script src="animation.js"></script>
+  <script src="background.js"></script>
+  <script>
+    // Function to start the quiz
+    function startQuiz() {
+      // Attempt to play background music (this should work because it's a user interaction)
+      var bgMusic = document.getElementById("backgroundMusic");
+      bgMusic.play().catch(function(error) {
+        console.error("Music playback error:", error);
+      });
+
+      // Hide the start screen popup
+      document.getElementById("startScreen").style.display = "none";
+
+      // Show Question 1 by switching its display and adding the slide-in animation
+      var questionBox1 = document.getElementById("questionBox1");
+      questionBox1.style.display = "block";
+      // Force reflow before adding animation class, if needed
+      void questionBox1.offsetWidth;
+      questionBox1.classList.add("slide-in");
+    }
+  </script>
+
 </body>
 </html>
