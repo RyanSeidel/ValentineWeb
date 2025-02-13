@@ -192,10 +192,10 @@ body {
 /* Adjust container for phones (max-width: 450px, max-height: 900px) */
 @media screen and (max-width: 450px) {
   .container {
-    width: 300px;
+    width: 300px;ki
     height: 500px; /* Increase the minimum height for more room */
     margin-top: 200px;
-    overflow: auto; /* Allow scrolling if content overflows */
+    overflow: hidden;
   }
 
   /* For the first question, let it size to content */
@@ -206,7 +206,7 @@ body {
 
   /* Optionally, let the slide boxes adjust their height automatically */
   .slide-box {
-    height: auto;
+    height: 400px;
   }
 
   .button-container {
