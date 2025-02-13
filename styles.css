@@ -193,8 +193,8 @@ body {
 @media screen and (max-width: 450px) {
   .container {
     width: 300px;
-    min-height: 500px; /* Increase the minimum height for more room */
-    margin-top: 50px;
+    height: 500px; /* Increase the minimum height for more room */
+    margin-top: 200px;
     overflow: auto; /* Allow scrolling if content overflows */
   }
 
