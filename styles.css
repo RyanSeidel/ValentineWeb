@@ -192,20 +192,7 @@ body {
 /* Adjust container for phones (max-width: 450px, max-height: 900px) */
 @media screen and (max-width: 450px) {
   .container {
-    width: 300px;ki
-    height: 500px; /* Increase the minimum height for more room */
-    margin-top: 200px;
-    overflow: hidden;
-  }
-
-  /* For the first question, let it size to content */
-  .popup-box {
-    height: auto; /* Allows it to shrink based on its content */
-    padding: 10px; /* Adjust padding as needed */
-  }
-
-  /* Optionally, let the slide boxes adjust their height automatically */
-  .slide-box {
+    width: 300px;
     height: 400px;
   }
 
@@ -213,5 +200,7 @@ body {
     margin-top: 40px;
     gap: 20px;
   }
+
+
 }
 
