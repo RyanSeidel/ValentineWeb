@@ -14,9 +14,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100vw;  /* 80% of the viewport width */
+  height: 100vh; /* 80% of the viewport height */
+  object-fit: cover; /* This still covers the area */
   z-index: -1;
 }
 
@@ -178,6 +178,15 @@ body {
   opacity: 1;
 }
 
+
+/* Media Queries changes */
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+  .container {
+    margin-top: 50px;
+    width: 500px;  /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+  }
+}
 
 
 
