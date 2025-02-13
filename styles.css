@@ -193,9 +193,9 @@ body {
 @media screen and (max-width: 450px) {
   .container {
     width: 300px;
-    max-height: 400px;
+    min-height: 500px; /* Increase the minimum height for more room */
     margin-top: 50px;
-    overflow: hidden; 
+    overflow: auto; /* Allow scrolling if content overflows */
   }
 
   /* For the first question, let it size to content */
@@ -204,9 +204,9 @@ body {
     padding: 10px; /* Adjust padding as needed */
   }
 
-  /* Optionally, if you want the slide boxes to remain full height: */
+  /* Optionally, let the slide boxes adjust their height automatically */
   .slide-box {
-    height: 100%;
+    height: auto;
   }
 
   .button-container {
