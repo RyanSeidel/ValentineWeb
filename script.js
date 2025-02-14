@@ -53,7 +53,7 @@ function displayResult() {
     result += randomCatMessage + " ";
 
     // Randomly select a cat image from the available files
-    const catImages = ["cat.png", "cat2.png", "cat3.png", "cat4.png", "cat5.png", "cat6.png", "cat7.jpg", "cat8.jpg", "cat10.jpg", "cat11.jgp", "cat12.jpg", "cat1.jpg"]; // Update these file names as needed
+    const catImages = ["cat.png", "cat2.png", "cat3.png", "cat4.png", "cat5.png", "cat6.png", "cat7.jpg", "cat8.jpg", "cat10.jpg", "cat11.jpg", "cat12.jpg", "cat1.jpg"]; // Update these file names as needed
     const randomCat = catImages[Math.floor(Math.random() * catImages.length)];
     document.getElementById('resultImage').src = "CatPhotos/" + randomCat; // Ensure the folder path is correct
   } else if (answers.question1 === 'dog') {
