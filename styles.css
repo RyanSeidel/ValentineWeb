@@ -135,12 +135,12 @@ body {
   position: fixed;
   top: 40%;
   right: -100%; /* Start off-screen to the right */
-  transform: translateY(-50%);
+  transform: translateY(-40%);
   background-color: rgba(255, 255, 255, 0.95);
   border: 2px solid #e75480;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -153,7 +153,7 @@ body {
   background: #fff;
   border: 2px solid #e75480;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   max-width: 300px;
   position: relative;
 }
@@ -176,7 +176,7 @@ body {
 
 /* When ready, add a class like .slide-in to animate the container in */
 .slide-in {
-  right: 20px;
+  right: 10px;
   opacity: 1;
 }
 
