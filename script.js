@@ -66,7 +66,6 @@ function displayResult() {
       "You're the best friend anyone could ask for!",
       "Your enthusiasm brightens every day!",
       "Your smile is as infectious as a wagging tail.",
-      "You're always up for a fun adventure!",
       "Your heart is as big as your bark.",
       "You make the world a happier place with your cheerful nature."
     ];
@@ -79,24 +78,53 @@ function displayResult() {
     document.getElementById('resultImage').src = "DogPhotos/" + randomDog; // Ensure the folder path is correct
   }
 
-  // Customize based on Question 2 (ideal day off)
-  if (answers.question2 === 'relax') {
-    result += "You love quiet days off. ";
-  } else if (answers.question2 === 'adventure') {
-    result += "You're always up for an adventure. ";
-  } else if (answers.question2 === 'gym') {
-    result += "You're passionate about fitness and love hitting the gym! ";
-  }
+// For Question 2 (ideal day off)
+if (answers.question2 === 'relax') {
+  const relaxMessages = [
+    "You love quiet days off. ",
+    "Your ideal day off is all about unwinding. ",
+    "Taking it easy is your style! "
+  ];
+  result += relaxMessages[Math.floor(Math.random() * relaxMessages.length)];
+} else if (answers.question2 === 'adventure') {
+  const adventureMessages = [
+    "You're always up for an adventure. ",
+    "Thrilling escapades are your go-to. ",
+    "Adventure calls, and you answer! "
+  ];
+  result += adventureMessages[Math.floor(Math.random() * adventureMessages.length)];
+} else if (answers.question2 === 'gym') {
+  const gymMessages = [
+    "You're passionate about fitness and love hitting the gym! ",
+    "Workout days are your best days. ",
+    "Gym time is the highlight of your day off! "
+  ];
+  result += gymMessages[Math.floor(Math.random() * gymMessages.length)];
+}
 
-  // Customize based on Question 3 (perfect Valentine's day date)
-  if (answers.question3 === 'quiet') {
-    result += "You prefer intimate dinners.";
-  } else if (answers.question3 === 'spontaneous') {
-    result += "Spontaneity is your thing!";
-  } else if (answers.question3 === 'creative') {
-    result += "You love creative experiences.";
-  }
-
+// For Question 3 (perfect Valentine's day date)
+if (answers.question3 === 'quiet') {
+  const quietDateMessages = [
+    "You prefer intimate dinners.",
+    "A quiet, cozy dinner is your ideal Valentine’s date.",
+    "You enjoy a peaceful and private celebration of love."
+  ];
+  result += quietDateMessages[Math.floor(Math.random() * quietDateMessages.length)];
+} else if (answers.question3 === 'spontaneous') {
+  const spontaneousDateMessages = [
+    "Spontaneity is your thing!",
+    "You love surprising your date with spontaneous plans!",
+    "An impromptu adventure sounds perfect for you."
+  ];
+  result += spontaneousDateMessages[Math.floor(Math.random() * spontaneousDateMessages.length)];
+} else if (answers.question3 === 'creative') {
+  const creativeDateMessages = [
+    "You love creative experiences.",
+    "Artistic and imaginative dates are your favorite.",
+    "A creative twist on Valentine’s Day is right up your alley."
+  ];
+  result += creativeDateMessages[Math.floor(Math.random() * creativeDateMessages.length)];
+}
   // Hide the quiz container so it's no longer visible
   document.querySelector('.container').style.display = 'none';
 
@@ -109,6 +137,7 @@ function displayResult() {
   void resultContainer.offsetWidth; // Force reflow for animation
   resultContainer.classList.add('slide-in');
 }
+
 
 
 function updateVideoSource() {
