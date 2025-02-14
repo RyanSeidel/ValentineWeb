@@ -138,7 +138,7 @@ body {
   transform: translateY(-40%);
   background-color: rgba(255, 255, 255, 0.95);
   border: 2px solid #e75480;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 10px;
   padding: 10px;
   display: flex;
@@ -170,7 +170,7 @@ body {
 }
 
 .result-image {
-  width: 150px;
+  width: 200px;
   height: auto;
 }
 
