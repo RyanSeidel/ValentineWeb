@@ -38,42 +38,42 @@ function displayResult() {
   if (answers.question1 === 'cat') {
     // Randomize between multiple "Cozy Cat" messages, if desired
     const catMessages = [
-      "Cozy Cat Vibes.",
-      "You're all about that feline finesse.",
-      "Cat-tastic and cozy!",
-      "You are Purr-fect!",
-      "Your elegance is as timeless as a graceful cat.",
-      "You have the mystique of a stealthy feline.",
-      "Your charm is as irresistible as a cat's purr.",
-      "You're as graceful as a cat on a moonlit night.",
-      "You bring comfort and joy like a purring kitten.",
-      "Your wit is as sharp as a cat's claws."
+      "Cozy Cat Vibes. ",
+      "You're all about that feline finesse. ",
+      "Cat-tastic and cozy! ",
+      "You are Purr-fect! ",
+      "Your elegance is as timeless as a graceful cat. ",
+      "You have the mystique of a stealthy feline. ",
+      "Your charm is as irresistible as a cat's purr. ",
+      "You're as graceful as a cat on a moonlit night. ",
+      "You bring comfort and joy like a purring kitten. ",
+      "Your wit is as sharp as a cat's claws. "
     ];
     const randomCatMessage = catMessages[Math.floor(Math.random() * catMessages.length)];
     result += randomCatMessage + " ";
 
     // Randomly select a cat image from the available files
-    const catImages = ["cat.png", "cat2.png", "cat3.png", "cat4.png", "cat5.png", "cat6.png", "cat7.jpg", "cat8.jpg", "cat10.jpg", "cat11.jpg", "cat12.jpg", "cat1.jpg"]; // Update these file names as needed
+    const catImages = ["cat.png", "cat2.png", "cat3.png", "cat5.png", "cat6.png", "cat7.jpg", "cat8.jpg", "cat10.jpg", "cat11.jpg", "cat12.jpg", "cat1.jpg", "catpic.jpg"]; // Update these file names as needed
     const randomCat = catImages[Math.floor(Math.random() * catImages.length)];
     document.getElementById('resultImage').src = "CatPhotos/" + randomCat; // Ensure the folder path is correct
   } else if (answers.question1 === 'dog') {
     // Randomize between multiple "Energetic Dog" messages
     const dogMessages = [
-      "Energetic Dog Spirit.",
-      "You're full of pup energy!",
-      "Woof! You're a lively companion.",
-      "Your loyalty is as boundless as your spirit.",
-      "You're the best friend anyone could ask for!",
-      "Your enthusiasm brightens every day!",
-      "Your smile is as infectious as a wagging tail.",
-      "Your heart is as big as your bark.",
-      "You make the world a happier place with your cheerful nature."
+      "Energetic Dog Spirit. ",
+      "You're full of pup energy! ",
+      "Woof! You're a lively companion. ",
+      "Your loyalty is as boundless as your spirit. ",
+      "You're the best friend anyone could ask for! ",
+      "Your enthusiasm brightens every day! ",
+      "Your smile is as infectious as a wagging tail. ",
+      "Your heart is as big as your bark. ",
+      "You make the world a happier place with your cheerful nature. "
     ];
     const randomDogMessage = dogMessages[Math.floor(Math.random() * dogMessages.length)];
     result += randomDogMessage + " ";
 
     // Randomly select a dog image from the available files
-    const dogImages = ["dog.png", "dog.jpg", "dog2.jpg", "dog5.png", "dog8.jpg", "dog11.jpg", "dog12.jpg", "dog13.jpg", "dog14.jpg", "dog15.jpg", "pug.jpg", "husky.jpg"]; // Update these file names as needed
+    const dogImages = ["dog.png", "dog.jpg", "dog2.jpg", "dog8.jpg", "dog11.jpg", "dog12.jpg", "dog13.jpg", "dog14.jpg", "dog15.jpg", "pug.jpg", "husky.jpg", "dog3.jpg", "jack.jpg"]; // Update these file names as needed
     const randomDog = dogImages[Math.floor(Math.random() * dogImages.length)];
     document.getElementById('resultImage').src = "DogPhotos/" + randomDog; // Ensure the folder path is correct
   }
@@ -83,21 +83,27 @@ if (answers.question2 === 'relax') {
   const relaxMessages = [
     "You love quiet days off. ",
     "Your ideal day off is all about unwinding. ",
-    "Taking it easy is your style! "
+    "Taking it easy is your style! ",
+    "You relish peaceful moments to recharge. ",
+    "A calm, relaxing day is your perfect escape. "
   ];
   result += relaxMessages[Math.floor(Math.random() * relaxMessages.length)];
 } else if (answers.question2 === 'adventure') {
   const adventureMessages = [
     "You're always up for an adventure. ",
     "Thrilling escapades are your go-to. ",
-    "Adventure calls, and you answer! "
+    "Adventure calls, and you answer! ",
+    "Every day is a new journey waiting to unfold. ",
+    "You live for the excitement of discovering the unknown. "
   ];
   result += adventureMessages[Math.floor(Math.random() * adventureMessages.length)];
 } else if (answers.question2 === 'gym') {
   const gymMessages = [
     "You're passionate about fitness and love hitting the gym! ",
     "Workout days are your best days. ",
-    "Gym time is the highlight of your day off! "
+    "Gym time is the highlight of your day off! ",
+    "Nothing beats the adrenaline rush of a solid gym session. ",
+    "You find strength and joy in every rep and set. "
   ];
   result += gymMessages[Math.floor(Math.random() * gymMessages.length)];
 }
@@ -106,22 +112,28 @@ if (answers.question2 === 'relax') {
 if (answers.question3 === 'quiet') {
   const quietDateMessages = [
     "You prefer intimate dinners.",
-    "A quiet, cozy dinner is your ideal Valentine’s date.",
-    "You enjoy a peaceful and private celebration of love."
+    "A quiet, cozy dinner is your ideal Valentine’s date. ",
+    "You enjoy a peaceful and private celebration of love. ",
+    "A serene evening with soft conversation is your perfect date. ",
+    "You cherish quiet moments that set the stage for romance. "
   ];
   result += quietDateMessages[Math.floor(Math.random() * quietDateMessages.length)];
 } else if (answers.question3 === 'spontaneous') {
   const spontaneousDateMessages = [
-    "Spontaneity is your thing!",
-    "You love surprising your date with spontaneous plans!",
-    "An impromptu adventure sounds perfect for you."
+    "Spontaneity is your thing! ",
+    "You love surprising your date with spontaneous plans! ",
+    "An impromptu adventure sounds perfect for you. ",
+    "Unexpected moments keep your life exciting. ",
+    "You thrive on delightful, unplanned surprises. "
   ];
   result += spontaneousDateMessages[Math.floor(Math.random() * spontaneousDateMessages.length)];
 } else if (answers.question3 === 'creative') {
   const creativeDateMessages = [
-    "You love creative experiences.",
-    "Artistic and imaginative dates are your favorite.",
-    "A creative twist on Valentine’s Day is right up your alley."
+    "You love creative experiences. ",
+    "Artistic and imaginative dates are your favorite. ",
+    "A creative twist on Valentine’s Day is right up your alley. ",
+    "Your heart thrives on artistic expressions. ",
+    "Every date with you is a canvas for creativity. "
   ];
   result += creativeDateMessages[Math.floor(Math.random() * creativeDateMessages.length)];
 }
